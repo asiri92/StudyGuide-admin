@@ -57,5 +57,16 @@
       <Name>StudyGuide.Entities</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\CREATE\1. CREATE_Database.sql" />
+    <Content Include="Scripts\CREATE\2. CREATE_Tables.sql" />
+    <Content Include="Scripts\StoredProcedures\SP_AddCustomer.sql" />
+    <Content Include="Scripts\StoredProcedures\SP_AddOrder.sql" />
+    <Content Include="Scripts\StoredProcedures\SP_AddStudyGuide.sql" />
+    <Content Include="Scripts\StoredProcedures\SP_FullFillOrder.sql" />
+    <Content Include="Scripts\StoredProcedures\SP_GetCustomers.sql" />
+    <Content Include="Scripts\StoredProcedures\SP_GetOrders.sql" />
+    <Content Include="Scripts\StoredProcedures\SP_GetStudyGuides.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
