@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Customer Orders";
+}
+
+<h2>Customer Orders</h2>
+<p>@ViewBag.Message</p>
+<table class="table-bordered">
+    <tr>
+        <th>Order ID</th>
+        <th>Customer ID</th>
+        <th>Study Guide ID</th>
+        <th>Fullfilled</th>
+        <th>Date Fullfilled</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var order in Model)
+    {
+        <tr>
+            <td>@order.OrderId</td>
+            <td>@order.CustomerId</td>
+            <td>@order.StudyGuideId</td>
+            <td>
+                @if(order.IsCompleted)
+                {
+                    <label>Completed</label>
+                }
+                else
+                {
+                    <label>Not Completed</label>
+                }
+            </td>
+            <td>
+                @if (order.IsCompleted)
+                {
+                    <lablel>@order.OrderCompletedDate.ToString("d")"</lablel>
+                }
+                else
+                {
+                    <label>N/A</label>
+                }
+            </td>
+            <td>
+                @if (!order.IsCompleted)
+                {
+                    using (Html.BeginForm("FullfillOrder", "Order", FormMethod.Post))
+                    {
+
+                        <input type="checkbox" value="false" onclick="this.form.submit();" />
+                    }
+                }
+                else
+                {
+                    <input type="checkbox" value="true" checked="checked" disabled="disabled" />
+                }
+            </td>
+        </tr>
+
+    }
+</table>
+
