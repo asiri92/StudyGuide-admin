@@ -50,6 +50,10 @@
     <Compile Include="Services\StudyGuideService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\StudyGuide.DataAccess\StudyGuide.DataAccess.csproj">
+      <Project>{07f2db17-947f-4430-b5af-ce1138f43406}</Project>
+      <Name>StudyGuide.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StudyGuide.Entities\StudyGuide.Entities.csproj">
       <Project>{9864bd13-d321-43c5-a5c5-80bc22398e4c}</Project>
       <Name>StudyGuide.Entities</Name>

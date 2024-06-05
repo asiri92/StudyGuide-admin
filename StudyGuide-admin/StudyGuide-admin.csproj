@@ -245,6 +245,10 @@
       <Project>{83388610-344D-4F03-9745-6523C3F590BA}</Project>
       <Name>StudyGuide.BusinessLogic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StudyGuide.DataAccess\StudyGuide.DataAccess.csproj">
+      <Project>{07f2db17-947f-4430-b5af-ce1138f43406}</Project>
+      <Name>StudyGuide.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StudyGuide.Entities\StudyGuide.Entities.csproj">
       <Project>{9864BD13-D321-43C5-A5C5-80BC22398E4C}</Project>
       <Name>StudyGuide.Entities</Name>
