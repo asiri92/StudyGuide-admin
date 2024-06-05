@@ -7,8 +7,8 @@
     <ProjectGuid>{07F2DB17-947F-4430-B5AF-CE1138F43406}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StudyGuide.Common</RootNamespace>
-    <AssemblyName>StudyGuide.Common</AssemblyName>
+    <RootNamespace>StudyGuide.DataAccess</RootNamespace>
+    <AssemblyName>StudyGuide.DataAccess</AssemblyName>
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
