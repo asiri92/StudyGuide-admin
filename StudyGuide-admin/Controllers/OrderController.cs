@@ -23,9 +23,9 @@ namespace StudyGuide_admin.Controllers
             return View(orders);
         }
         [HttpPost]
-        public ActionResult FullfillOrder(Order order)
+        public ActionResult FullfillOrder(string customerID, int studyguideId)
         {
-            _orderService.FullFillOrder(order);
+            _orderService.FullFillOrder(customerID, studyguideId);
             return RedirectToAction("Orders");
         }
     }

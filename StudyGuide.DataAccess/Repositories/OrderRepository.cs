@@ -31,7 +31,7 @@ namespace StudyGuide.DataAccess.Repositories
             }
         }
 
-        public void FullFillOrder(Order order)
+        public void FullFillOrder(string customerID, int studyguideId)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
@@ -39,8 +39,9 @@ namespace StudyGuide.DataAccess.Repositories
                 {
                     CommandType = CommandType.StoredProcedure
                 };
-                command.Parameters.AddWithValue("@IsCompleted", order.IsCompleted);
-                command.Parameters.AddWithValue("@OrderCompletedDate", order.OrderCompletedDate);
+                command.Parameters.AddWithValue("@CustomerId", customerID);
+                command.Parameters.AddWithValue("@StudyGuideId", studyguideId);
+
                 connection.Open();
                 command.ExecuteNonQuery();
             }

@@ -11,6 +11,6 @@ namespace StudyGuide_admin.Interfaces
     {
         IEnumerable<Order> GetOrders();
         void AddOrder(Order order);
-        void FullFillOrder(Order order);
+        void FullFillOrder(string customerID, int studyguideId);
     }
 }

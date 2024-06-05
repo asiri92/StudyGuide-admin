@@ -1,12 +1,14 @@
 CREATE OR ALTER PROCEDURE [SP_FullFillOrder]
 (
-	@OrderId INT,
-	@IsCompleted BIT
+	@CustomerId VARCHAR(50),
+	@StudyGuideId INT
+	
 )
 AS
 BEGIN
 	UPDATE Orders
-	SET IsCompleted = @IsCompleted,
+	SET IsCompleted = 1,
 		OrderCompletedDate = GETDATE()
-	WHERE OrderId = @OrderId
+	WHERE CustomerId = @CustomerId
+	AND StudyGuideId = @StudyGuideId
 END

@@ -22,9 +22,9 @@ namespace StudyGuide_admin.Services
             _orderRepository.AddOrder(order);
         }
 
-        public void FullFillOrder(Order order)
+        public void FullFillOrder(string customerID, int studyguideId)
         {
-            _orderRepository.FullFillOrder(order);
+            _orderRepository.FullFillOrder(customerID, studyguideId);
         }
 
         public IEnumerable<Order> GetOrders()
